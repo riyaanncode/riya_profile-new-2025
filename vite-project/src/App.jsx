@@ -1,10 +1,18 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./Component/homePage";
+import AboutPage from "./Component/AboutPage";
+import SkillsPage from "./Component/SkillsPage";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      heloo
-    </div>
+    <Router>
+      <Routes>
+       
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+         <Route path="/skills" element={ <SkillsPage />} />
+      </Routes>
+    </Router>
   );
 }
 
